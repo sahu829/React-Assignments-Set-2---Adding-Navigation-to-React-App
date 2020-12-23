@@ -28,4 +28,4 @@ class App extends Component {
 }
 
 export default App;
-export { LocationsDisplay };
+export const LocationDisplay = LocationsDisplay;
