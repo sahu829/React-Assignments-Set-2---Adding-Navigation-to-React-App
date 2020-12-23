@@ -4,9 +4,7 @@ import "../styles/App.css";
 import About from "./about";
 import Badpage from "./badpage";
 import Home from "./home";
-import LoactionDisplay from "./locationDisplay";
-//import NoMatch from "./noMatch";
-//import NoPage from "./noPage";
+import LocationsDisplay from "./locationsDisplay";
 
 class App extends Component {
   render() {
@@ -22,11 +20,12 @@ class App extends Component {
 
           <Route path="/" component={Badpage} />
         </Switch>
-        <LoactionDisplay />
+
+        <LocationsDisplay />
       </>
     );
   }
 }
 
 export default App;
-export { LoactionDisplay };
+export { LocationsDisplay };
