@@ -10,9 +10,9 @@ module.exports = generateCodeFromObject;
 
 // ReactDOM.render(<App />, document.getElementById("root"));
 
-ReactDOM.render(
+/*ReactDOM.render(
   <BrowserRouter>
     <App />
   </BrowserRouter>,
   document.getElementById("root")
-);
+);*/
