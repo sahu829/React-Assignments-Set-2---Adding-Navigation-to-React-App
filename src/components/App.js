@@ -1,8 +1,11 @@
 import React, { Component, useState } from "react";
-import { Route } from "react-router-dom";
+import { Link, Route, Switch } from "react-router-dom";
 import "../styles/App.css";
 import About from "./about";
 import Home from "./home";
+import LoactionDisplay from "./locationDisplay";
+import NoMatch from "./noMatch";
+//import NoPage from "./noPage";
 
 class App extends Component {
   render() {
@@ -10,8 +13,14 @@ class App extends Component {
       <>
         <div id="main">{/* Do not remove the main div */}</div>
 
-        <Route path="/" component={Home} />
-        <Route path="/about" component={About} />
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Switch>
+          <Route path="/" component={Home} />
+          <Route path="/about" component={About} />
+          <Route component={NoMatch} />
+        </Switch>
+        <LoactionDisplay />
       </>
     );
   }
