@@ -17,9 +17,10 @@ class App extends Component {
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
         <Switch>
-          <Route path="/" component={Home} />
           <Route path="/about" component={About} />
-          <Route component={Badpage} />
+          <Route path="/" exact component={Home} />
+
+          <Route path="/" component={Badpage} />
         </Switch>
         <LoactionDisplay />
       </>
@@ -28,4 +29,4 @@ class App extends Component {
 }
 
 export default App;
-export const LoactionsDisplay = LoactionDisplay;
+export { LoactionDisplay };
