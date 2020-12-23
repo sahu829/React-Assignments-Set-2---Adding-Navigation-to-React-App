@@ -2,9 +2,10 @@ import React, { Component, useState } from "react";
 import { Link, Route, Switch } from "react-router-dom";
 import "../styles/App.css";
 import About from "./about";
+import Badpage from "./badpage";
 import Home from "./home";
 import LoactionDisplay from "./locationDisplay";
-import NoMatch from "./noMatch";
+//import NoMatch from "./noMatch";
 //import NoPage from "./noPage";
 
 class App extends Component {
@@ -18,7 +19,7 @@ class App extends Component {
         <Switch>
           <Route path="/" component={Home} />
           <Route path="/about" component={About} />
-          <Route component={NoMatch} />
+          <Route component={Badpage} />
         </Switch>
         <LoactionDisplay />
       </>
@@ -27,3 +28,4 @@ class App extends Component {
 }
 
 export default App;
+export { LoactionDisplay, Home, About, Badpage };
